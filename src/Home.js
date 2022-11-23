@@ -55,24 +55,24 @@ const Home = () => {
         loader={<h1 className='loading'>Loading...</h1>}
         hasMore={true}
       >
-        {users.map((u, idx) => (
+        {users.map((usr, idx) => (
           <div className='user' key={idx}>
 
 
 <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src= {u.picture.large} alt='profile' />
+      <Card.Img variant="top" src= {usr.picture.large} alt='profile' />
       <Card.Body>
-        <Card.Title>{u.name.first} {u.name.last}</Card.Title>
+        <Card.Title>{usr.name.first} {usr.name.last}</Card.Title>
         <Card.Text>
-        Email: {(u.email)}
+        Email: {(usr.email)}
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Contact: {u.cell}</ListGroup.Item>
-        <ListGroup.Item>Location: {(u.location.city)}</ListGroup.Item>
-        <ListGroup.Item>State: {(u.location.state)}</ListGroup.Item>
-        <ListGroup.Item>Post code: {(u.location.postcode)}</ListGroup.Item>
-        <ListGroup.Item>Country: {(u.location.country)}</ListGroup.Item>
+        <ListGroup.Item>Contact: {usr.cell}</ListGroup.Item>
+        <ListGroup.Item>Location: {(usr.location.city)}</ListGroup.Item>
+        <ListGroup.Item>State: {(usr.location.state)}</ListGroup.Item>
+        <ListGroup.Item>Post code: {(usr.location.postcode)}</ListGroup.Item>
+        <ListGroup.Item>Country: {(usr.location.country)}</ListGroup.Item>
 
       </ListGroup>
     </Card>
